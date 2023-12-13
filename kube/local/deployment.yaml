@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-local
+  labels:
+    app: service-local
+spec:
+  selector:
+    matchLabels:
+      app: service-local
+  template:
+    metadata:
+      labels:
+        app: service-local
+    spec:
+      containers:
+        - image: ghcr.io/laurynasant/service-local:latest
+          name: service-local
+          env:
+            - name: DATABASE_URL
+              value: "URL"

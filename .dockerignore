@@ -1,0 +1,6 @@
+.git
+*.md
+.gitignore
+kube/
+.vscode/
+.env*
